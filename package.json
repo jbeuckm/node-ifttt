@@ -1,0 +1,25 @@
+{
+  "name": "ifttt",
+  "description": "Create IFTTT channel endpoints with node.",
+  "version": "0.1.0",
+  "author": {
+    "name": "bkonetzny",
+    "email": "bkonetzny@gmail.com"
+  },
+  "dependencies": {
+    "underscore": "1.8.2"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "main": "./index",
+  "maintainers": [
+    {
+      "name": "bkonetzny",
+      "email": "bkonetzny@gmail.com"
+    }
+  ]
+}
