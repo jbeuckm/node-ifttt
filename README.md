@@ -43,8 +43,8 @@ iftttChannel.registerTrigger(YOUR_TRIGGER);
 iftttChannel.registerAction(YOUR_ACTION);
 ```
 
-Add IFTTT channel routes to your exmpress app.
+Add IFTTT channel routes to your express app.
 
 ```javascript
-ifttt.addExpressRoutes(app);
+iftttChannel.addExpressRoutes(app);
 ```
