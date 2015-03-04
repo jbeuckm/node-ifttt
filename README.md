@@ -2,7 +2,7 @@
 
 ![IFTTT](https://d3rnbxvnd0hlox.cloudfront.net/assets/r2012/ifttt_logo_83-56800c44757a4683441a9f9c53fba868.svg)
 
-Enables you to build IFTTT compatible node endpoints with express.
+Enables you to build [IFTTT](https://ifttt.com) compatible node endpoints with express.
 
 ## Features
 
@@ -16,7 +16,7 @@ Enables you to build IFTTT compatible node endpoints with express.
 
  - [Realtime API](https://developers.ifttt.com/docs/api_reference#realtime-api) for Triggers
 
-## Installation
+## Install
 
 Install the module via [npm](https://www.npmjs.com/):
 
@@ -24,27 +24,19 @@ Install the module via [npm](https://www.npmjs.com/):
 $ npm install --save ifttt
 ```
 
-Require the module in your code:
+## Usage
 
 ```javascript
+// Require the module in your code.
 var Ifttt = require('ifttt');
-```
 
-Create new IFTTT channel:
-
-```javascript
+// Create new IFTTT channel.
 var iftttChannel = new Ifttt();
-```
 
-Add triggers & actions to your IFTTT channel:
-
-```javascript
+// Add triggers & actions to your IFTTT channel.
 iftttChannel.registerTrigger(YOUR_TRIGGER);
 iftttChannel.registerAction(YOUR_ACTION);
-```
 
-Add IFTTT channel routes to your express app.
-
-```javascript
+// Add IFTTT channel routes to your express app.
 iftttChannel.addExpressRoutes(app);
 ```
