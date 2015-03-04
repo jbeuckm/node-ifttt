@@ -6,6 +6,9 @@
     "name": "bkonetzny",
     "email": "bkonetzny@gmail.com"
   },
+  "bugs": {
+    "url": "https://github.com/Organiceme/node-ifttt/issues"
+  },
   "dependencies": {
     "underscore": "1.8.2"
   },
@@ -15,6 +18,12 @@
   "engines": {
     "node": ">=0.10.0"
   },
+  "keywords": [
+    "express",
+    "ifttt",
+    "middleware"
+  ],
+  "license": "MIT",
   "main": "./index",
   "maintainers": [
     {
