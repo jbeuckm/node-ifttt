@@ -166,7 +166,7 @@ Ifttt.prototype.addExpressRoutes = function(app) {
    * @see https://developers.ifttt.com/docs/api_reference#triggers
    */
   app.post(this.iftttBasepath + '/triggers/:trigger_slug', authCheck, function(req, res){
-    var trigger_slug = req.param('trigger_slug');
+    var trigger_slug = req.params['trigger_slug'];
     var payload = req.body;
 
     that.getTriggerResponse(trigger_slug, req, payload, function(response){
@@ -183,8 +183,8 @@ Ifttt.prototype.addExpressRoutes = function(app) {
    * @see https://developers.ifttt.com/docs/api_reference#trigger-fields
    */
   app.post(this.iftttBasepath + '/triggers/:trigger_slug/fields/:trigger_field_slug/options', authCheck, function(req, res){
-    var trigger_slug = req.param('trigger_slug');
-    var trigger_field_slug = req.param('trigger_field_slug');
+    var trigger_slug = req.params['trigger_slug'];
+    var trigger_field_slug = req.params['trigger_field_slug'];
 
     that.getTriggerFieldOptionsResponse(trigger_slug, trigger_field_slug, req, function(response){
       that._sendExpressResponse(res, response);
@@ -192,8 +192,8 @@ Ifttt.prototype.addExpressRoutes = function(app) {
   });
 
   app.post(this.iftttBasepath + '/triggers/:trigger_slug/fields/:trigger_field_slug/validate', authCheck, function(req, res){
-    var trigger_slug = req.param('trigger_slug');
-    var trigger_field_slug = req.param('trigger_field_slug');
+    var trigger_slug = req.params['trigger_slug'];
+    var trigger_field_slug = req.params['trigger_field_slug'];
     var payload = req.body;
 
     that.getTriggerFieldValidateResponse(trigger_slug, trigger_field_slug, req, payload, function(response){
@@ -209,7 +209,7 @@ Ifttt.prototype.addExpressRoutes = function(app) {
    * @see https://developers.ifttt.com/docs/api_reference#actions
    */
   app.post(this.iftttBasepath + '/actions/:action_slug', authCheck, function(req, res){
-    var action_slug = req.param('action_slug');
+    var action_slug = req.params['action_slug'];
     var payload = req.body;
 
     that.getActionResponse(action_slug, req, payload, function(response){
@@ -227,8 +227,8 @@ Ifttt.prototype.addExpressRoutes = function(app) {
    * @see https://developers.ifttt.com/docs/api_reference#action-fields
    */
   app.post(this.iftttBasepath + '/actions/:action_slug/fields/:action_field_slug/options', authCheck, function(req, res){
-    var action_slug = req.param('action_slug');
-    var action_field_slug = req.param('action_field_slug');
+    var action_slug = req.params['action_slug'];
+    var action_field_slug = req.params['action_field_slug'];
 
     that.getActionFieldOptionsResponse(action_slug, action_field_slug, req, function(response){
       that._sendExpressResponse(res, response);
